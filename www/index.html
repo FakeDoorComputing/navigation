@@ -8,98 +8,59 @@
 		<script src="jquery-mobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
 		<link href="jquery-mobile/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
 
-	</head>
+    <script>
+      $(function(){$("[data-role=panel]").enhanceWithin().panel();});
+    </script>
 
+	</head>
 
 	<body>
 
-<!-- PAGE ONE -->
-		<div data-role="page" id="pageone">
+    <div data-role="panel" data-display="overlay" data-theme="a" id="naviPane" data-position="left">
+      <ul data-role="listview">
+        <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+        <li><a href="#pageone" data-transition="flip">Page One</a></li>
+        <li><a href="#pagetwo" data-transition="flip">Page Two</a></li>
+        <li><a href="#pagethree" data-transition="flip">Page Three</a></li>
+      </ul>
+    </div>
 
-<!-- Panel -->
-			<div data-role="panel" id="myPanel" data-display="overlay" data-position="left">
-    		<h2>Navigation</h2>
-    		<p>Choose where to go</p>
-				<a href="#pageone" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page One</a></br>
-				<a href="#pagetwo" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page Two</a></br>
-				<a href="#pagethree" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page Three</a>
-  		</div>
+    <div data-role="page" id="pageone" data-title="Panel main"  data-position="fixed">
 
-<!-- Header -->
-			<div data-role="header">
-				<h1></h1>
-				<a href="#myPanel" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
-  		</div>
+      <div data-role="header">
+        <h1>Navigation Test</h1>
+        <a href="#naviPane" data-icon="bars" data-iconpos="notext">Menu</a>
+      </div>
 
-<!-- Main Content -->
-  		<div data-role="main" class="ui-content">
-    		<h1>Page One</h1>
-  		</div>
+      <div role="main" class="ui-content jqm-content jqm-fullwidth">
+        <h1>Page One</h1>
+      </div>
+    </div>
 
-<!-- Footer -->
-  		<div data-role="footer" data-position="fixed">
-    		<h1>Page Footer</h1>
-  		</div>
-		</div>
 
-		<!-- PAGE TWO -->
-				<div data-role="page" id="pagetwo">
+<div data-role="page" id="pagetwo" data-theme="b" data-position="fixed">
 
-		<!-- Panel -->
-					<div data-role="panel" id="myPanel" data-display="overlay">
-		    		<h2>Navigation</h2>
-		    		<p>Choose where to go</p>
-						<a href="#pageone" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page One</a></br>
-						<a href="#pagetwo" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page Two</a></br>
-						<a href="#pagethree" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page Three</a>
-		  		</div>
+    <div data-role="header">
+        <h1>Navigation Test</h1>
+        <a href="#naviPane" data-icon="bars" data-iconpos="notext">Menu</a>
+    </div>
 
-		<!-- Header -->
-					<div data-role="header">
-						<h1></h1>
-						<a href="#myPanel" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
-		  		</div>
+    <div data-role="main" class="ui-content">
+        <h1>Page Two</h2>
+    </div>
 
-		<!-- Main Content -->
-		  		<div data-role="main" class="ui-content">
-		    		<h1>Page Two</h1>
-		  		</div>
+</div>
 
-		<!-- Footer -->
-		  		<div data-role="footer" data-position="fixed">
-		    		<h1>Page Footer</h1>
-		  		</div>
-				</div>
+<div data-role="page" id="pagethree" data-theme="a" data-position="fixed">
 
-				<!-- PAGE THREE -->
-						<div data-role="page" id="pagethree">
+    <div data-role="header">
+        <h1>Navigation Test</h1>
+        <a href="#naviPane" data-icon="bars" data-iconpos="notext">Menu</a>
+    </div>
 
-				<!-- Panel -->
-							<div data-role="panel" id="myPanel" data-display="overlay">
-								<!--  <a data-rel="close" class="ui-icon-delete ui-btn-icon-left"></a> -->
-				    		<h2>Navigation</h2>
-				    		<p>Choose where to go</p>
-								<a href="#pageone" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page One</a></br>
-								<a href="#pagetwo" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page Two</a></br>
-								<a href="#pagethree" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a">Page Three</a>
-				  		</div>
+    <div data-role="main" class="ui-content">
+        <h1>Page Three</h1>
+    </div>
 
-				<!-- Header -->
-							<div data-role="header">
-								<h1></h1>
-								<a href="#myPanel" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
-				  		</div>
-
-				<!-- Main Content -->
-				  		<div data-role="main" class="ui-content">
-				    		<h1>Page Three</h1>
-				  		</div>
-
-				<!-- Footer -->
-				  		<div data-role="footer" data-position="fixed">
-				    		<h1>Page Footer</h1>
-				  		</div>
-						</div>
-
-	</body>
-</html>
+</div>
+</body>
